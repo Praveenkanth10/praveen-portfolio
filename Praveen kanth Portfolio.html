@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Praveen Kanth — Data Analyst Portfolio</title>
+  <meta name="description" content="Praveen Kanth — Aspiring Data Analyst. Projects: Spotify analysis, Sentiment Analysis, Real-time Weather Dashboard. Python, SQL, Power BI." />
+  <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
+  <style>
+    /* Reset & basics */
+    :root{
+      --bg:#0b1020; --card:#0f1724aa; --glass:#ffffff10; --accent:#3dd3ff; --muted:#9aa7b2; --glass-2:#ffffff06;
+      --radius:18px; --maxw:1100px;
+      --glass-blur:10px;
+      font-family: Inter, 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;background:linear-gradient(180deg,#061022 0%, #071426 60%, #041018 100%);color:#e6f6ff}
+    a{color:var(--accent);text-decoration:none}
+    .container{max-width:var(--maxw);margin:40px auto;padding:32px}
+
+    /* Glass card */
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.02));backdrop-filter: blur(var(--glass-blur));border:1px solid rgba(255,255,255,0.05);border-radius:var(--radius);box-shadow:0 8px 30px rgba(2,6,23,0.6)}
+
+    /* Header */
+    header{display:flex;align-items:center;justify-content:space-between;padding:18px 22px}
+    .brand{display:flex;align-items:center;gap:14px}
+    .logo{width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#7ef0ff);display:flex;align-items:center;justify-content:center;color:#031021;font-weight:700;font-size:18px}
+    nav{display:flex;gap:18px;align-items:center}
+    nav a{font-weight:600;color:rgba(230,246,255,0.9)}
+
+    /* Hero */
+    .hero{display:grid;grid-template-columns:1fr 380px;gap:28px;align-items:center;padding:36px}
+    .intro h1{font-size:34px;margin:0 0 8px;letter-spacing:-0.5px}
+    .intro p{margin:0 0 18px;color:var(--muted);line-height:1.55}
+    .cta{display:flex;gap:12px}
+    .btn{padding:12px 16px;border-radius:12px;border:1px solid rgba(255,255,255,0.06);background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));cursor:pointer;font-weight:700}
+    .btn.primary{background:linear-gradient(90deg,var(--accent),#76f0ff);color:#022029}
+
+    /* Profile card */
+    .profile{padding:18px;border-radius:14px}
+    .avatar{width:90px;height:90px;border-radius:14px;background:linear-gradient(135deg,#ffffff22,#ffffff11);display:flex;align-items:center;justify-content:center;font-weight:700}
+    .small{font-size:13px;color:var(--muted);margin-top:8px}
+
+    /* Sections */
+    section{margin-top:26px}
+    .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+    .projects .item{padding:18px;border-radius:12px}
+    .item h4{margin:0 0 8px}
+    .skills {display:flex;flex-wrap:wrap;gap:10px}
+    .skill{padding:8px 12px;border-radius:999px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border:1px solid rgba(255,255,255,0.03);font-weight:600}
+
+    /* Visual flourish */
+    .glass-strip{height:6px;width:100%;border-radius:8px;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.06),transparent);margin-top:22px}
+
+    /* Contact */
+    .contact-form{display:grid;gap:12px}
+    input,textarea{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:12px;border-radius:10px;color:#e6f6ff}
+
+    footer{margin-top:40px;padding:18px;text-align:center;color:var(--muted)}
+
+    /* Responsive */
+    @media (max-width:900px){
+      .hero{grid-template-columns:1fr;}
+      .grid{grid-template-columns:1fr}
+      header{flex-direction:column;gap:12px}
+    }
+
+    /* micro-interactions */
+    .card:hover{transform:translateY(-6px);transition:transform .28s cubic-bezier(.2,.9,.3,1)}
+    .btn:hover{opacity:0.95}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <header>
+        <div class="brand">
+          <div class="logo">PK</div>
+          <div>
+            <div style="font-weight:800">Praveen Kanth</div>
+            <div style="font-size:13px;color:var(--muted)">Aspiring Data Analyst • AI & Data Science</div>
+          </div>
+        </div>
+        <nav>
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#skills">Skills</a>
+          <a href="#contact">Contact</a>
+          <a href="/assets/UG_Praveen_Resume.pdf" download class="btn" style="padding:10px 12px">Download Resume</a>
+        </nav>
+      </header>
+
+      <div class="hero">
+        <div class="intro" style="padding:6px 18px 32px">
+          <h1>Hi — I'm <span style="color:var(--accent)">Praveen</span>, a Data Analyst who turns data into decisions.</h1>
+          <p>I build dashboards, analyze datasets, and create ML models to solve real business problems. I work with <strong>Python, SQL, Power BI, and Tableau</strong>. Explore my projects and reach out if you'd like to collaborate.</p>
+          <div class="cta">
+            <a href="#projects" class="btn primary">See Projects</a>
+            <a href="https://www.linkedin.com/in/praveen-kanth-d/" target="_blank" class="btn">LinkedIn</a>
+          </div>
+
+          <div class="glass-strip"></div>
+
+          <div style="display:flex;gap:10px;margin-top:18px;align-items:center">
+            <div style="font-size:13px;color:var(--muted);width:120px">Location</div>
+            <div style="font-weight:700">Coimbatore, India</div>
+          </div>
+        </div>
+
+        <aside class="profile" style="padding:22px">
+          <div style="display:flex;gap:14px;align-items:center">
+            <div class="avatar">PK</div>
+            <div>
+              <div style="font-weight:800">Praveen Kanth</div>
+              <div class="small">B.Tech AI & Data Science • Class of 2025</div>
+            </div>
+          </div>
+
+          <div style="margin-top:16px;color:var(--muted);font-size:14px">Quick stats</div>
+          <div style="display:flex;gap:10px;margin-top:10px">
+            <div style="flex:1;padding:10px;border-radius:12px;background:linear-gradient(180deg,rgba(255,255,255,0.01),transparent);text-align:center">
+              <div style="font-weight:800">3+</div>
+              <div style="font-size:12px;color:var(--muted)">Projects</div>
+            </div>
+            <div style="flex:1;padding:10px;border-radius:12px;background:linear-gradient(180deg,rgba(255,255,255,0.01),transparent);text-align:center">
+              <div style="font-weight:800">5</div>
+              <div style="font-size:12px;color:var(--muted)">Certifications</div>
+            </div>
+          </div>
+
+          <div style="margin-top:18px">
+            <a href="https://github.com/Praveenkanth10" target="_blank" class="btn" style="display:inline-block">GitHub</a>
+          </div>
+        </aside>
+      </div>
+    </div>
+
+    <!-- About -->
+    <section id="about">
+      <div class="card" style="padding:18px">
+        <h2 style="margin-top:0">About</h2>
+        <p style="color:var(--muted)">I’m an enthusiastic and detail-oriented aspiring Data Analyst with hands-on experience in Python, SQL, Power BI, and Machine Learning. I enjoy turning messy datasets into clean, visual stories and building solutions that drive decisions. During my B.Tech in AI & Data Science, I built multiple projects including music analytics, sentiment classifiers, and real-time dashboards.</p>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="projects">
+      <h2 style="margin-top:18px">Projects</h2>
+      <div class="grid">
+        <div class="card item" style="padding:18px">
+          <h4>Spotify Data Analysis</h4>
+          <p style="color:var(--muted)">Exploratory analysis of Spotify tracks to discover patterns in popularity, genres, and audio features using Python (Pandas, Matplotlib, Seaborn).</p>
+          <p style="margin-top:8px"><strong>Key skills:</strong> Python, Pandas, Visualization.</p>
+          <a href="#" class="btn" style="margin-top:10px;display:inline-block">View on GitHub</a>
+        </div>
+
+        <div class="card item" style="padding:18px">
+          <h4>Sentiment Analysis (ML)</h4>
+          <p style="color:var(--muted)">Built a sentiment classifier using scikit-learn & NLTK with TF-IDF feature engineering to classify text as positive, negative, or neutral.</p>
+          <p style="margin-top:8px"><strong>Key skills:</strong> NLP, Scikit-learn, NLTK.</p>
+          <a href="#" class="btn" style="margin-top:10px;display:inline-block">View on GitHub</a>
+        </div>
+
+        <div class="card item" style="padding:18px">
+          <h4>Real-Time Weather Dashboard</h4>
+          <p style="color:var(--muted)">Real-time dashboard using Weather API to display temperature, humidity, and weather conditions for multiple cities with interactive charts.</p>
+          <p style="margin-top:8px"><strong>Key skills:</strong> API Integration, Python, Visualization.</p>
+          <a href="#" class="btn" style="margin-top:10px;display:inline-block">View on GitHub</a>
+        </div>
+
+        <div class="card item" style="padding:18px">
+          <h4>Energy Management — ICSTEM’25</h4>
+          <p style="color:var(--muted)">Presented a prototype on AI & IoT-driven energy management focusing on reducing cost and optimizing industrial energy consumption.</p>
+          <p style="margin-top:8px"><strong>Key skills:</strong> IoT, ML, System Design.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills">
+      <div class="card" style="padding:18px;margin-top:18px">
+        <h2 style="margin-top:0">Skills & Tools</h2>
+        <div class="skills" style="margin-top:12px">
+          <div class="skill">Python</div>
+          <div class="skill">SQL</div>
+          <div class="skill">Power BI</div>
+          <div class="skill">Tableau</div>
+          <div class="skill">Pandas</div>
+          <div class="skill">NumPy</div>
+          <div class="skill">Scikit-learn</div>
+          <div class="skill">Matplotlib</div>
+          <div class="skill">Seaborn</div>
+          <div class="skill">MongoDB</div>
+          <div class="skill">Excel</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <div class="card" style="padding:18px;margin-top:18px">
+        <h2 style="margin-top:0">Contact</h2>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:18px">
+          <div>
+            <p style="color:var(--muted)">Email me at <strong>praveenkanth170@gmail.com</strong> or connect on LinkedIn.</p>
+            <p style="color:var(--muted)">LinkedIn: <a href="https://www.linkedin.com/in/praveen-kanth-d/" target="_blank">praveen-kanth-d</a></p>
+            <p style="color:var(--muted)">GitHub: <a href="https://github.com/Praveenkanth10" target="_blank">Praveenkanth10</a></p>
+          </div>
+          <div>
+            <form class="contact-form" onsubmit="event.preventDefault();alert('Thanks — I will get back to you! (Form demo)')">
+              <input type="text" placeholder="Your name" required />
+              <input type="email" placeholder="Your email" required />
+              <textarea placeholder="Message" rows="4" required></textarea>
+              <button class="btn primary" type="submit">Send Message</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div style="opacity:0.8">© <span id="year"></span> Praveen Kanth — Built with ❤️. Template: Glassmorphism Portfolio</div>
+    </footer>
+  </div>
+
+  <script>
+    // small scripts
+    document.getElementById('year').textContent = new Date().getFullYear();
+    // smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click', e=>{e.preventDefault();document.querySelector(a.getAttribute('href')).scrollIntoView({behavior:'smooth'})}));
+  </script>
+</body>
+</html>
